@@ -7,6 +7,7 @@ import logging
 import os
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import requests
 
@@ -120,17 +121,40 @@ def parte_dos_challenge():
     """
     columnas = ['categoria', 'fuente', 'provincia']
     ## Importar sólo si no hay csv's en las rutas!!! = Pendiente
-    PandasCSV.importar_archivos_csv()
+    #PandasCSV.importar_archivos_csv()
     ## archivos depende de parte_uno_challenge
-    archivos = PandasCSV.ruta_archivos_csv
+    archivos = ['bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022',
+        'museos/2022-febrero/museos-19-02-2022',
+        'cines/2022-febrero/cines-19-02-2022'
+    ]
+    #archivos = PandasCSV.ruta_archivos_csv
     lista = []
     for ruta in archivos:
         lista.append(PandasCSV.crear_dataframe(ruta, columnas))
     dataframe = PandasCSV.concadenar_dataframes(lista)
-    conteo_categoria = dataframe.groupby('categoria')['categoria'].count()
-    conteo_fuente = dataframe.groupby('fuente')['fuente'].count()
-    conteo_provincia_categoria = dataframe.groupby(['provincia', 'categoria']).size()
-    return conteo_categoria, conteo_fuente
+    categoria = dataframe.groupby('categoria')['categoria'].count()
+    fuente = dataframe.groupby('fuente')['fuente'].count()
+    provincia_categoria = dataframe.groupby(['provincia', 'categoria'], as_index=False).size()
+
+    catdf = categoria.to_frame()
+    catdf.columns = ['numero_registros']
+    catdf = catdf.reset_index()
+    catdf.rename(columns={'categoria': 'nombre'}, inplace=True)
+    catdf['tipo'] = 'categoria'
+    catdf['provincia'] = np.nan
+
+    fuentedf = fuente.to_frame()
+    fuentedf.columns = ['numero_registros']
+    fuentedf = fuentedf.reset_index()
+    fuentedf.rename(columns={'fuente': 'nombre'}, inplace=True)
+    fuentedf['tipo'] = 'fuente'
+    fuentedf['provincia'] = np.nan
+
+    provincia_categoria.rename(columns={'size': 'numero_registros', 'categoria': 'nombre'}, inplace=True)
+    provincia_categoria['tipo'] = 'categoria'
+    datos = [catdf, fuentedf, provincia_categoria]
+    return pd.concat(datos, ignore_index=True, sort=False)
+
 
 def parte_tres_challenge():
     """
@@ -148,7 +172,6 @@ def parte_tres_challenge():
     diccionario = {'si': 1, 'SI': 1}
     lambda_filter = lambda val: diccionario.get(val, 0)
     datos_cine['espacio_incaa'] = datos_cine['espacio_incaa'].apply(lambda_filter)
-    #print(datos_cine['espacio_incaa'].unique())
     grupo_provincia = datos_cine.groupby('provincia', as_index=False)
     numero_pantallas = grupo_provincia['pantallas'].sum()
     numero_butacas = grupo_provincia['butacas'].sum()
