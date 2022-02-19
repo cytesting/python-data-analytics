@@ -35,6 +35,7 @@ class PandasCSV:
             PandasCSV.guardar_contenido(ubicacion, contenido)
 
     def guardar_contenido(ubicacion, contenido):
+        """ Guarda contenido en archivo """
         try:
             with open(ubicacion, 'w', encoding='latin-1') as archivo_csv:
                 archivo_csv.write(contenido)
@@ -43,9 +44,10 @@ class PandasCSV:
             logging.error(f'No se pudo guardar el archivo {ubicacion}')
 
     def descargar_contenido(categoria):
+        """ Descarga contenido remoto """
         try:
             response = requests.get(DICT_URLS[categoria])
-            logging.info(f'Archivo {categoria}: {response.status_code}')
+            logging.info(f'Archivo {categoria}. Status code: {response.status_code}')
             return response.text
         except requests.exceptions.ConnectionError:
             logging.error('No se pudo establecer conexión')
@@ -83,13 +85,10 @@ class PandasCSV:
         logging.info(f'Se creó el dataframe de {archivo_csv}')
         return dataframe
 
-    def concadenar_dataframes(ruta_archivos_csv, columnas):
+    def concadenar_dataframes(lista_dataframes):
         """
         Une dataframes en un dataframe
         """
-        lista_dataframes = []
-        for ruta in ruta_archivos_csv:
-            lista_dataframes.append(PandasCSV.crear_dataframe(ruta, columnas))
         dataframe = pd.concat(lista_dataframes, ignore_index=True)
         return dataframe
 
@@ -105,11 +104,14 @@ def parte_uno_challenge():
     archivos = PandasCSV.ruta_archivos_csv
     columnas = ['cod_localidad', 'id_provincia', 'id_departamento', 'categoria', 'provincia',
         'localidad', 'nombre', 'domicilio', 'codigo_postal', 'numero_de_telefono', 'mail', 'web']
-    return PandasCSV.concadenar_dataframes(archivos, columnas)
+    lista_dataframes = []
+    for ruta in archivos:
+        lista_dataframes.append(PandasCSV.crear_dataframe(ruta, columnas))
+    return PandasCSV.concadenar_dataframes(lista_dataframes)
 
 def parte_dos_challenge():
-    """ 
-    Parte 2 del challenge 
+    """
+    Parte 2 del challenge
     Procesar los datos conjuntos para poder generar una tabla con la siguiente
     información:
     Cantidad de registros totales por categoría
@@ -118,21 +120,17 @@ def parte_dos_challenge():
     """
     columnas = ['categoria', 'fuente', 'provincia']
     ## Importar sólo si no hay csv's en las rutas!!! = Pendiente
-    #PandasCSV.importar_archivos_csv()
+    PandasCSV.importar_archivos_csv()
     ## archivos depende de parte_uno_challenge
     archivos = PandasCSV.ruta_archivos_csv
-    dataframe = PandasCSV.concadenar_dataframes(archivos, columnas)
+    lista = []
+    for ruta in archivos:
+        lista.append(PandasCSV.crear_dataframe(ruta, columnas))
+    dataframe = PandasCSV.concadenar_dataframes(lista)
     conteo_categoria = dataframe.groupby('categoria')['categoria'].count()
     conteo_fuente = dataframe.groupby('fuente')['fuente'].count()
     conteo_provincia_categoria = dataframe.groupby(['provincia', 'categoria']).size()
-    print('categoria =========================================')
-    print(conteo_categoria)
-    print('\n\n')
-    print('fuente ============================================')
-    print(conteo_fuente)
-    print('\n\n')
-    print('provincia - categoria =============================')
-    print(conteo_provincia_categoria)
+    return conteo_categoria, conteo_fuente
 
 def parte_tres_challenge():
     """
@@ -150,14 +148,11 @@ def parte_tres_challenge():
     diccionario = {'si': 1, 'SI': 1}
     lambda_filter = lambda val: diccionario.get(val, 0)
     datos_cine['espacio_incaa'] = datos_cine['espacio_incaa'].apply(lambda_filter)
-    print(datos_cine['espacio_incaa'].unique())
-    groupo_provincia = datos_cine.groupby('provincia')
-    numero_pantallas = groupo_provincia['pantallas'].sum()
-    numero_butacas = groupo_provincia['butacas'].sum()
-    numero_espacios_incaa = groupo_provincia['espacio_incaa'].sum()
-    print(numero_butacas)
-    print(numero_pantallas)
-    print(numero_espacios_incaa)
-    print(archivo_csv)
-
-#parte_uno_challenge()
+    #print(datos_cine['espacio_incaa'].unique())
+    grupo_provincia = datos_cine.groupby('provincia', as_index=False)
+    numero_pantallas = grupo_provincia['pantallas'].sum()
+    numero_butacas = grupo_provincia['butacas'].sum()
+    numero_espacios_incaa = grupo_provincia['espacio_incaa'].sum()
+    lista = [numero_pantallas, numero_butacas, numero_espacios_incaa]
+    unidos = numero_pantallas.merge(numero_butacas, on='provincia')
+    return unidos.merge(numero_espacios_incaa, on='provincia')
