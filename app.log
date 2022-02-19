@@ -117,3 +117,202 @@
 2022-02-19 17:08:21,388 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
 2022-02-19 17:08:21,396 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
 2022-02-19 17:08:31,465 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 17:33:22,861 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 17:33:22,880 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 17:33:22,891 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 17:36:20,073 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 19:46:22,877 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 19:46:22,894 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 19:46:22,903 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 19:47:33,357 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 19:47:33,371 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 19:47:33,378 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 19:50:58,053 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 19:50:58,069 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 19:50:58,076 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 19:59:09,829 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 19:59:09,843 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 19:59:09,851 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:02:23,219 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:02:23,237 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:02:23,248 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:03:44,768 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:03:44,783 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:03:44,791 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:04:37,713 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:04:37,731 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:04:37,741 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:09:50,228 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:09:50,241 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:09:50,248 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:19:43,894 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:19:45,225 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv HTTP/1.1" 200 511527
+2022-02-19 20:19:45,700 Archivo bibliotecas_populares. Status code: 200
+2022-02-19 20:19:45,702 Se guardaron los archivos csv
+2022-02-19 20:19:45,704 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:19:46,908 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv HTTP/1.1" 200 96427
+2022-02-19 20:19:46,911 Archivo cines. Status code: 200
+2022-02-19 20:19:46,912 Se guardaron los archivos csv
+2022-02-19 20:19:46,914 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:19:48,158 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museo.csv HTTP/1.1" 200 307629
+2022-02-19 20:19:48,479 Archivo museos. Status code: 200
+2022-02-19 20:19:48,481 Se guardaron los archivos csv
+2022-02-19 20:19:48,504 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:19:48,513 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:19:48,564 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:19:48,605 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:19:48,619 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:19:48,628 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:19:48,650 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:22:47,183 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:22:48,350 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv HTTP/1.1" 200 511527
+2022-02-19 20:22:48,770 Archivo bibliotecas_populares. Status code: 200
+2022-02-19 20:22:48,771 Se guardaron los archivos csv
+2022-02-19 20:22:48,773 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:22:49,987 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv HTTP/1.1" 200 96427
+2022-02-19 20:22:49,990 Archivo cines. Status code: 200
+2022-02-19 20:22:49,991 Se guardaron los archivos csv
+2022-02-19 20:22:49,993 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:22:51,239 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museo.csv HTTP/1.1" 200 None
+2022-02-19 20:22:51,708 Archivo museos. Status code: 200
+2022-02-19 20:22:51,711 Se guardaron los archivos csv
+2022-02-19 20:22:51,729 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:22:51,737 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:22:51,750 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:22:51,772 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:22:51,787 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:22:51,794 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:22:51,815 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:23:55,236 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:23:56,453 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv HTTP/1.1" 200 511527
+2022-02-19 20:23:56,908 Archivo bibliotecas_populares. Status code: 200
+2022-02-19 20:23:56,909 Se guardaron los archivos csv
+2022-02-19 20:23:56,911 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:23:58,133 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv HTTP/1.1" 200 96427
+2022-02-19 20:23:58,139 Archivo cines. Status code: 200
+2022-02-19 20:23:58,139 Se guardaron los archivos csv
+2022-02-19 20:23:58,141 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:23:59,370 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museo.csv HTTP/1.1" 200 307629
+2022-02-19 20:23:59,683 Archivo museos. Status code: 200
+2022-02-19 20:23:59,684 Se guardaron los archivos csv
+2022-02-19 20:23:59,711 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:23:59,720 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:23:59,734 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:23:59,755 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:23:59,768 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:23:59,776 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:23:59,794 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:24:48,231 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:24:49,471 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv HTTP/1.1" 200 511527
+2022-02-19 20:24:49,945 Archivo bibliotecas_populares. Status code: 200
+2022-02-19 20:24:49,947 Se guardaron los archivos csv
+2022-02-19 20:24:49,949 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:24:51,143 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv HTTP/1.1" 200 96427
+2022-02-19 20:24:51,148 Archivo cines. Status code: 200
+2022-02-19 20:24:51,149 Se guardaron los archivos csv
+2022-02-19 20:24:51,150 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:24:52,357 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museo.csv HTTP/1.1" 200 307629
+2022-02-19 20:24:52,666 Archivo museos. Status code: 200
+2022-02-19 20:24:52,667 Se guardaron los archivos csv
+2022-02-19 20:24:52,690 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:24:52,699 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:24:52,715 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:24:52,738 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:24:52,755 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:24:52,764 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:24:52,785 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:25:07,620 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:25:08,937 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv HTTP/1.1" 200 None
+2022-02-19 20:25:09,434 Archivo bibliotecas_populares. Status code: 200
+2022-02-19 20:25:09,436 Se guardaron los archivos csv
+2022-02-19 20:25:09,437 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:25:10,660 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv HTTP/1.1" 200 96427
+2022-02-19 20:25:10,664 Archivo cines. Status code: 200
+2022-02-19 20:25:10,664 Se guardaron los archivos csv
+2022-02-19 20:25:10,666 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:25:11,893 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museo.csv HTTP/1.1" 200 307629
+2022-02-19 20:25:12,203 Archivo museos. Status code: 200
+2022-02-19 20:25:12,204 Se guardaron los archivos csv
+2022-02-19 20:25:12,231 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:25:12,238 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:25:12,253 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:25:12,280 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:25:12,297 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:25:12,308 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:25:12,331 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:25:48,162 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:25:48,785 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv HTTP/1.1" 200 511527
+2022-02-19 20:25:49,280 Archivo bibliotecas_populares. Status code: 200
+2022-02-19 20:25:49,282 Se guardaron los archivos csv
+2022-02-19 20:25:49,285 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:25:49,875 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv HTTP/1.1" 200 96427
+2022-02-19 20:25:49,877 Archivo cines. Status code: 200
+2022-02-19 20:25:49,878 Se guardaron los archivos csv
+2022-02-19 20:25:49,879 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:25:50,464 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museo.csv HTTP/1.1" 200 307629
+2022-02-19 20:25:50,771 Archivo museos. Status code: 200
+2022-02-19 20:25:50,773 Se guardaron los archivos csv
+2022-02-19 20:25:50,793 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:25:50,802 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:25:50,817 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:25:50,841 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:25:50,856 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:25:50,865 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:25:50,884 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:26:21,029 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:26:22,297 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv HTTP/1.1" 200 511527
+2022-02-19 20:26:22,786 Archivo bibliotecas_populares. Status code: 200
+2022-02-19 20:26:22,787 Se guardaron los archivos csv
+2022-02-19 20:26:22,789 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:26:23,371 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv HTTP/1.1" 200 96427
+2022-02-19 20:26:23,375 Archivo cines. Status code: 200
+2022-02-19 20:26:23,376 Se guardaron los archivos csv
+2022-02-19 20:26:23,378 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:26:24,669 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museo.csv HTTP/1.1" 200 307629
+2022-02-19 20:26:25,376 Archivo museos. Status code: 200
+2022-02-19 20:26:25,377 Se guardaron los archivos csv
+2022-02-19 20:26:25,409 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:26:25,419 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:26:25,437 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:26:25,465 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:26:25,483 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:26:25,493 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:26:25,515 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:28:17,369 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:28:18,655 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv HTTP/1.1" 200 None
+2022-02-19 20:28:19,132 Archivo bibliotecas_populares. Status code: 200
+2022-02-19 20:28:19,134 Se guardaron los archivos csv
+2022-02-19 20:28:19,137 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:28:20,378 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv HTTP/1.1" 200 96427
+2022-02-19 20:28:20,381 Archivo cines. Status code: 200
+2022-02-19 20:28:20,382 Se guardaron los archivos csv
+2022-02-19 20:28:20,384 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 20:28:21,673 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museo.csv HTTP/1.1" 200 307629
+2022-02-19 20:28:22,000 Archivo museos. Status code: 200
+2022-02-19 20:28:22,002 Se guardaron los archivos csv
+2022-02-19 20:28:22,023 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:28:22,032 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:28:22,046 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:28:22,067 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 20:28:22,083 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 20:28:22,091 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 20:28:22,110 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 21:24:30,157 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 21:24:31,487 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv HTTP/1.1" 200 511527
+2022-02-19 21:24:31,962 Archivo bibliotecas_populares. Status code: 200
+2022-02-19 21:24:31,964 Se guardaron los archivos csv
+2022-02-19 21:24:31,966 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 21:24:33,479 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv HTTP/1.1" 200 96427
+2022-02-19 21:24:33,783 Archivo cines. Status code: 200
+2022-02-19 21:24:33,784 Se guardaron los archivos csv
+2022-02-19 21:24:33,786 Starting new HTTPS connection (1): datos.cultura.gob.ar:443
+2022-02-19 21:24:35,035 https://datos.cultura.gob.ar:443 "GET /dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museo.csv HTTP/1.1" 200 None
+2022-02-19 21:24:35,346 Archivo museos. Status code: 200
+2022-02-19 21:24:35,348 Se guardaron los archivos csv
+2022-02-19 21:24:35,376 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 21:24:35,387 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 21:24:35,407 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 21:24:35,435 Se creó el dataframe de bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022
+2022-02-19 21:24:35,454 Se creó el dataframe de museos/2022-febrero/museos-19-02-2022
+2022-02-19 21:24:35,465 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
+2022-02-19 21:24:35,490 Se creó el dataframe de cines/2022-febrero/cines-19-02-2022
