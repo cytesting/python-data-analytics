@@ -7,7 +7,7 @@ import subprocess
 from decouple import config
 import sqlalchemy
 
-from procesos_pandas import datos_pandas
+from procesos_pandas import obtener_datos
 
 engine = sqlalchemy.create_engine(config('DATABASE_URL'))
 
@@ -20,7 +20,7 @@ def crear_tablas():
 
 def insertar_datos():
     """ Insertar datos a la base de datos """
-    datos = datos_pandas()
+    datos = obtener_datos()
     try:
         datos[0].to_sql('tabla_unificada', con=engine, if_exists='replace', index=False)
         datos[1].to_sql('registros_categoria', con=engine, if_exists='replace', index=False)
@@ -30,6 +30,7 @@ def insertar_datos():
         logging.error('No se pudo conectar a la base de datos')
 
 def main():
+    """ Ejecuta todos los scripts del proyecto """
     crear_tablas()
     insertar_datos()
 

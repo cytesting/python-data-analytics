@@ -1,4 +1,4 @@
-""" 
+"""
 Constantes para procesar archivos en pandas
 """
 
@@ -30,7 +30,6 @@ class Constantes:
         'December': 'diciembre'
     }
 
-
     COLUMNAS = [
         'cod_loc', 'idprovincia', 'iddepartamento', 'categoria', 'provincia',
         'localidad', 'nombre', 'direccion', 'cp', 'telefono', 'mail', 'web', 'fuente',
@@ -46,4 +45,4 @@ class Constantes:
     DICT_COLUMNAS = dict(zip(COLUMNAS, COLUMNAS_DB))
 
     DICT_URLS = obtener_urls()
-    
+

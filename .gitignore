@@ -6,3 +6,4 @@ cines/
 bibliotecas_populares/
 tests/
 app.log
+test_db.py
