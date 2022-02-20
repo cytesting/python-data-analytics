@@ -6,33 +6,33 @@ import subprocess
 
 from decouple import config
 
-from sqlalchemy import create_engine
+import sqlalchemy
 
-from procesos_pandas import parte_uno_challenge, parte_dos_challenge, parte_tres_challenge
+from procesos_pandas import datos_pandas
 
-engine = create_engine(config('DATABASE_URL'))
+engine = sqlalchemy.create_engine(config('DATABASE_URL'))
 
 DATABASE_NAME = config('DATABASE_NAME')
 
-def create_table():
+def crear_tablas():
     """ Crear las tablas """
     subprocess.run(['psql', '-d', DATABASE_NAME, '-f', 'db_script.sql'], check=True)
 
-def populate_db():
+def insertar_datos():
     """ Insertar datos """
-    datos1 = parte_uno_challenge()
-    datos2 = parte_dos_challenge()
-    datos3 = parte_tres_challenge()
+    datos = datos_pandas()
     try:
-        datos1.to_sql('tabla_unificada', con=engine, if_exists='append', index=False)
-        datos2.to_sql('registros_categoria', con=engine, if_exists='append', index=False)
-        datos3.to_sql('registros_cine', con=engine, if_exists='append', index=False)
+        datos[0].to_sql('tabla_unificada', con=engine, if_exists='replace', index=False)
+        datos[1].to_sql('registros_categoria', con=engine, if_exists='replace', index=False)
+        datos[2].to_sql('registros_cine', con=engine, if_exists='replace', index=False)
         logging.info('All data saved to db...')
-    except:
+    except sqlalchemy.exc.OperationalError:
         logging.error('Could not connect to database')
 
-def check_db():
+def revisar_db():
     """ Comprobar y testear """
-    print(engine.execute("SELECT * FROM registros_categoria").fetchall())
+    print(engine.execute("SELECT * FROM tabla_unificada").fetchone())
+    print(engine.execute("SELECT * FROM registros_categoria").fetchone())
+    print(engine.execute("SELECT * FROM registros_cine").fetchone())
 
-check_db()
+insertar_datos()

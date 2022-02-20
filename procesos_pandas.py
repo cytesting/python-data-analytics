@@ -1,5 +1,5 @@
 """
-This module imports the csv files and processes them with pandas
+Este módulo importa los archivos csv y los procesa con pandas
 """
 
 from datetime import datetime
@@ -79,10 +79,13 @@ class PandasCSV:
         """
         Crea un dataframe a partir de un archivo csv
         """
+        now = datetime.now()
+        fecha = now.strftime('%d-%m-%Y')
         dataframe = pd.read_csv(archivo_csv)
         PandasCSV.formatear_columnas(dataframe)
         dataframe = dataframe.rename(columns=DICT_COLUMNAS)
         dataframe = dataframe.filter(items=columnas)
+        dataframe['fecha_descarga'] = fecha
         logging.info(f'Se creó el dataframe de {archivo_csv}')
         return dataframe
 
@@ -110,6 +113,16 @@ def parte_uno_challenge():
         lista_dataframes.append(PandasCSV.crear_dataframe(ruta, columnas))
     return PandasCSV.concadenar_dataframes(lista_dataframes)
 
+def formatear_series(series):
+    """ Convierte pandas series en dataframe """
+    dataframe = series.to_frame()
+    dataframe.columns = ['numero_registros']
+    dataframe = dataframe.reset_index()
+    dataframe.rename(columns={'categoria': 'nombre'}, inplace=True)
+    dataframe['tipo'] = 'categoria'
+    dataframe['provincia'] = np.nan
+    return dataframe
+
 def parte_dos_challenge():
     """
     Parte 2 del challenge
@@ -120,14 +133,8 @@ def parte_dos_challenge():
     Cantidad de registros por provincia y categoría
     """
     columnas = ['categoria', 'fuente', 'provincia']
-    ## Importar sólo si no hay csv's en las rutas!!! = Pendiente
-    #PandasCSV.importar_archivos_csv()
-    ## archivos depende de parte_uno_challenge
-    archivos = ['bibliotecas_populares/2022-febrero/bibliotecas_populares-19-02-2022',
-        'museos/2022-febrero/museos-19-02-2022',
-        'cines/2022-febrero/cines-19-02-2022'
-    ]
-    #archivos = PandasCSV.ruta_archivos_csv
+    PandasCSV.importar_archivos_csv()
+    archivos = PandasCSV.ruta_archivos_csv
     lista = []
     for ruta in archivos:
         lista.append(PandasCSV.crear_dataframe(ruta, columnas))
@@ -135,21 +142,8 @@ def parte_dos_challenge():
     categoria = dataframe.groupby('categoria')['categoria'].count()
     fuente = dataframe.groupby('fuente')['fuente'].count()
     provincia_categoria = dataframe.groupby(['provincia', 'categoria'], as_index=False).size()
-
-    catdf = categoria.to_frame()
-    catdf.columns = ['numero_registros']
-    catdf = catdf.reset_index()
-    catdf.rename(columns={'categoria': 'nombre'}, inplace=True)
-    catdf['tipo'] = 'categoria'
-    catdf['provincia'] = np.nan
-
-    fuentedf = fuente.to_frame()
-    fuentedf.columns = ['numero_registros']
-    fuentedf = fuentedf.reset_index()
-    fuentedf.rename(columns={'fuente': 'nombre'}, inplace=True)
-    fuentedf['tipo'] = 'fuente'
-    fuentedf['provincia'] = np.nan
-
+    catdf = formatear_series(categoria)
+    fuentedf = formatear_series(fuente)
     provincia_categoria.rename(columns={'size': 'numero_registros', 'categoria': 'nombre'}, inplace=True)
     provincia_categoria['tipo'] = 'categoria'
     datos = [catdf, fuentedf, provincia_categoria]
@@ -179,3 +173,10 @@ def parte_tres_challenge():
     lista = [numero_pantallas, numero_butacas, numero_espacios_incaa]
     unidos = numero_pantallas.merge(numero_butacas, on='provincia')
     return unidos.merge(numero_espacios_incaa, on='provincia')
+
+def datos_pandas():
+    """ retorna datos de las tres partes del challenge """
+    datos1 = parte_uno_challenge()
+    datos2 = parte_dos_challenge()
+    datos3 = parte_tres_challenge()
+    return [datos1, datos2, datos3]
