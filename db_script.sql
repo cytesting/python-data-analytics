@@ -21,19 +21,23 @@ CREATE TABLE "tabla_unificada" (
     "codigo_postal" varchar(20),
     "numero_de_telefono" varchar(50),
     "mail" varchar(100),
-    "web" varchar(150)
+    "web" varchar(150),
+    "fecha_descarga" date not null
 );
 
 CREATE TABLE "registros_categoria" (
-    "nombre" varchar(100),
+    "categoria" varchar(100),
     "numero_registros" integer,
     "tipo" varchar(100),
-    "provincia" varchar(100)
+    "provincia" varchar(100),
+    "fuente" varchar(100),
+    "fecha_descarga" date not null
 );
 
 CREATE TABLE "registros_cine" (
     "provincia" varchar(100),
     "pantallas" integer,
     "butacas" integer,
-    "espacio_incaa" integer
+    "espacio_incaa" integer,
+    "fecha_descarga" date not null
 );
