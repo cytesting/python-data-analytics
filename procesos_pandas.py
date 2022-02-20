@@ -79,13 +79,10 @@ class PandasCSV:
         """
         Crea un dataframe a partir de un archivo csv
         """
-        now = datetime.now()
-        fecha = now.strftime('%d-%m-%Y')
         dataframe = pd.read_csv(archivo_csv)
         PandasCSV.formatear_columnas(dataframe)
         dataframe = dataframe.rename(columns=DICT_COLUMNAS)
         dataframe = dataframe.filter(items=columnas)
-        dataframe['fecha_descarga'] = fecha
         logging.info(f'Se creó el dataframe de {archivo_csv}')
         return dataframe
 
@@ -111,7 +108,13 @@ def parte_uno_challenge():
     lista_dataframes = []
     for ruta in archivos:
         lista_dataframes.append(PandasCSV.crear_dataframe(ruta, columnas))
-    return PandasCSV.concadenar_dataframes(lista_dataframes)
+    datos = PandasCSV.concadenar_dataframes(lista_dataframes)
+    datos['fecha_descarga'] = obtener_fecha()
+    return datos
+
+def obtener_fecha():
+    now = datetime.now()
+    return now.strftime('%d-%m-%Y')
 
 def formatear_series(series):
     """ Convierte pandas series en dataframe """
@@ -146,9 +149,10 @@ def parte_dos_challenge():
     fuentedf = formatear_series(fuente)
     provincia_categoria.rename(columns={'size': 'numero_registros', 'categoria': 'nombre'}, inplace=True)
     provincia_categoria['tipo'] = 'categoria'
-    datos = [catdf, fuentedf, provincia_categoria]
-    return pd.concat(datos, ignore_index=True, sort=False)
-
+    lista = [catdf, fuentedf, provincia_categoria]
+    datos = pd.concat(lista, ignore_index=True, sort=False)
+    datos['fecha_descarga'] = obtener_fecha()
+    return datos
 
 def parte_tres_challenge():
     """
@@ -172,7 +176,9 @@ def parte_tres_challenge():
     numero_espacios_incaa = grupo_provincia['espacio_incaa'].sum()
     lista = [numero_pantallas, numero_butacas, numero_espacios_incaa]
     unidos = numero_pantallas.merge(numero_butacas, on='provincia')
-    return unidos.merge(numero_espacios_incaa, on='provincia')
+    datos = unidos.merge(numero_espacios_incaa, on='provincia')
+    datos['fecha_descarga'] = obtener_fecha()
+    return datos
 
 def datos_pandas():
     """ retorna datos de las tres partes del challenge """
