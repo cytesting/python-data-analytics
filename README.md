@@ -10,13 +10,15 @@ pandas de python.
 Crear entorno virtual python con virtualenv o venv. Instalar las dependencias:
 
 ```
+source venv/bin/activate
 pip install -r requirements
 ```
 
 ## Configuración de la base de datos
 
-Crear un archivo **.env** con la siguientes variables de entorno para la conexión con
-la base de datos:
+Para acceder a la base de datos Postgres se requiere nombre del usuario, contraseña y nombre
+de la base de datos. Hay que crear un archivo **.env** con la siguientes variables de
+entorno para la conexión con la base de datos:
 
 ```
 [settings]
@@ -26,19 +28,14 @@ DATABASE_NAME=<nombre_de_la_db>
 
 ## Ejecución
 
-Activar el entorno virtual (unix):
+Activar el entorno virtual (unix) y ejecutar el archivo conexion_sql.py:
 
 ```
 source venv/bin/activate
-```
-
-Ejecutar el archivo conexion_sql.py:
-
-```
 python conexion_sql.py
 ```
 
-Ver los logs en el archivo **app.log**
+Se pueden ver los logs en el archivo **app.log**
 
 ## Herramientas
 
