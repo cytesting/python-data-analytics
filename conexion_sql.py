@@ -22,9 +22,9 @@ def insertar_datos():
     """ Insertar datos a la base de datos """
     datos = obtener_datos()
     try:
-        datos[0].to_sql('tabla_unificada', con=engine, if_exists='replace', index=False)
-        datos[1].to_sql('registros_categoria', con=engine, if_exists='replace', index=False)
-        datos[2].to_sql('registros_cine', con=engine, if_exists='replace', index=False)
+        datos[0].to_sql('tabla_unificada', con=engine, if_exists='append', index=False)
+        datos[1].to_sql('registros_categoria', con=engine, if_exists='append', index=False)
+        datos[2].to_sql('registros_cine', con=engine, if_exists='append', index=False)
         logging.info('Se guardó todo en la base de datos...')
     except sqlalchemy.exc.OperationalError:
         logging.error('No se pudo conectar a la base de datos')
